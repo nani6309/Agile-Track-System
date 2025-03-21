@@ -1,0 +1,189 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f9fafb; /* Softer off-white background for a cleaner look */
+  color: #1f2a44; /* Darker shade for better readability */
+  line-height: 1.7; /* Slightly increased line height for better text flow */
+}
+
+/* App Container */
+.App {
+  max-width: 1280px; /* Slightly wider to accommodate modern screens */
+  margin: 0 auto;
+  padding: 30px; /* Increased padding for more breathing room */
+  background-color: #ffffff; /* White background for the main content area */
+  border-radius: 12px; /* Softer, modern rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+  min-height: 100vh; /* Ensure the container takes up the full viewport height */
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  gap: 20px; /* Increased gap for better spacing */
+  background: linear-gradient(90deg, #3b82f6, #60a5fa); /* Gradient background for a modern feel */
+  padding: 15px 25px; /* Slightly more padding */
+  border-radius: 10px; /* More rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+  margin-bottom: 40px; /* More space below the nav */
+}
+
+nav a {
+  color: #ffffff; /* Pure white for better contrast */
+  text-decoration: none;
+  font-weight: 600; /* Slightly bolder text */
+  padding: 10px 20px; /* Larger padding for a bigger click area */
+  border-radius: 8px; /* More rounded corners */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent white on hover */
+  transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+nav button {
+  background-color: #ef4444; /* Brighter red for the logout button */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav button:hover {
+  background-color: #dc2626; /* Darker red on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Headings */
+h1 {
+  font-size: 2.8rem; /* Slightly larger for more prominence */
+  color: #1e3a8a; /* Deep blue for a professional look */
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 700; /* Bolder for emphasis */
+}
+
+h2 {
+  font-size: 2rem; /* Slightly larger */
+  color: #1e40af; /* Slightly lighter blue */
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #1e40af;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa); /* Gradient for a modern button */
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px; /* Larger padding for a more comfortable click area */
+  border-radius: 8px; /* More rounded */
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+button:hover {
+  background: linear-gradient(90deg, #2563eb, #3b82f6); /* Darker gradient on hover */
+  transform: translateY(-3px); /* More pronounced lift effect */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+button:active {
+  transform: translateY(0); /* Reset transform on click */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Reduced shadow on click */
+}
+
+/* Form Inputs */
+input, select {
+  display: block;
+  width: 100%;
+  max-width: 350px; /* Slightly wider inputs for better usability */
+  padding: 12px; /* More padding for comfort */
+  margin: 12px 0; /* More vertical spacing */
+  border: 1px solid #d1d5db; /* Softer gray border */
+  border-radius: 8px; /* More rounded corners */
+  font-size: 1rem;
+  background-color: #f9fafb; /* Light background for inputs */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #3b82f6; /* Match the primary color */
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.3); /* More pronounced focus glow */
+}
+
+/* Error Messages */
+.error {
+  color: #ef4444; /* Brighter red for errors */
+  font-size: 0.95rem; /* Slightly larger for readability */
+  margin-top: 8px;
+  font-weight: 500;
+  background-color: #fef2f2; /* Light red background for emphasis */
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+/* Lists (Teams, Tasks, Users) */
+.team-list, .task-list, .user-list {
+  margin-top: 25px;
+  display: grid;
+  gap: 20px; /* More spacing between items */
+}
+
+.team-list div, .task-list div, .user-list div {
+  background-color: #ffffff;
+  padding: 20px; /* More padding for a spacious feel */
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05); /* Slightly stronger shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  border-left: 4px solid #3b82f6; /* Blue accent on the left for visual interest */
+}
+
+.team-list div:hover, .task-list div:hover, .user-list div:hover {
+  transform: translateY(-5px); /* More pronounced lift effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+  background-color: #f9fafb; /* Subtle background change on hover */
+}
+
+/* Specific Button Styles for Lists */
+.team-list button, .user-list button {
+  background: linear-gradient(90deg, #10b981, #34d399); /* Green gradient for "Get Details" buttons */
+  margin-left: 12px;
+  padding: 8px 16px;
+}
+
+.team-list button:hover, .user-list button:hover {
+  background: linear-gradient(90deg, #059669, #10b981); /* Darker green gradient on hover */
+  transform: translateY(-2px);
+}
+
+/* Loading State */
+.loading {
+  color: #3b82f6;
+  font-size: 1rem;
+  text-align: center;
+  margin: 20px 0;
+  font-weight: 500;
+}
